@@ -1,0 +1,16 @@
+=== Evidence 4 and 5 ===
+-rwsr-xr-x 1 root root 1446024 Oct  5 00:01 /tmp/rootbash
+uid=1001(nurse01) gid=1003(nurse01) euid=0(root) groups=1003(nurse01),1001(clinic-staff),1002(billing)
+=== ausearch ===
+----
+time->Mon Oct  5 00:01:00 2026
+type=PROCTITLE msg=audit(1791158460.160:346): proctitle=617564697463746C002D77002F6F70742F6D6572696469616E2D736372697074732F6261636B75702E7368002D70007761002D6B006D6572696469616E5F6261636B75705F74616D706572
+type=SYSCALL msg=audit(1791158460.160:346): arch=c000003e syscall=44 success=yes exit=1112 a0=4 a1=7ffe2262cd60 a2=458 a3=0 items=0 ppid=6950 pid=6951 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1791158460.160:346): auid=1000 ses=5 subj=unconfined op=add_rule key="meridian_backup_tamper" list=4 res=1
+----
+time->Mon Oct  5 00:01:00 2026
+type=PROCTITLE msg=audit(1791158460.224:357): proctitle=62617368002D63006563686F20226370202F62696E2F62617368202F746D702F726F6F74626173683B2063686D6F6420752B73202F746D702F726F6F746261736822203E3E202F6F70742F6D6572696469616E2D736372697074732F6261636B75702E7368
+type=PATH msg=audit(1791158460.224:357): item=1 name="/opt/meridian-scripts/backup.sh" inode=1048598 dev=fc:00 mode=0100777 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1791158460.224:357): item=0 name="/opt/meridian-scripts/" inode=1048597 dev=fc:00 mode=040755 ouid=0 ogid=0 rdev=00:00 nametype=PARENT cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791158460.224:357): cwd="/home/wazuh"
+type=SYSCALL msg=audit(1791158460.224:357): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=61aee5a97f30 a2=441 a3=1b6 items=2 ppid=6955 pid=6956 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=5 comm="bash" exe="/usr/bin/bash" subj=unconfined key="meridian_backup_tamper"

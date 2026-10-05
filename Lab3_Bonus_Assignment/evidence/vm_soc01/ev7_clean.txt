@@ -1,0 +1,9 @@
+hostname=meridian-soc01
+=== Evidence 7 enforce ===
+cat: /srv/clinic-notes/../billing/ledger.txt: Permission denied
+enforce_exit=1
+=== key AVC ===
+type=AVC msg=audit(1791158556.350:714): apparmor="DENIED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/srv/billing/ledger.txt" pid=7374 comm="cat" requested_mask="r" denied_mask="r" fsuid=1001 ouid=0
+=== CT6 copy to /tmp ===
+Patient A outstanding balance: 420.00 USD
+tmp_exit=0

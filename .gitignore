@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.aux
+*.log
+*.out
+*.toc
+.DS_Store
+*.DMP
+*.dmp
+*CREDENTIALS*
+*credentials*
+.env

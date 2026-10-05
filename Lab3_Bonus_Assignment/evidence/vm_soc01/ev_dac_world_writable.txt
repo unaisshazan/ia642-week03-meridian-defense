@@ -1,0 +1,4 @@
+hostname=meridian-soc01
+=== World-writable DAC demo ===
+total 4
+-rw-rw-r-- 1 otheruser otheruser 9 Oct  4 23:59 note1.txt

@@ -1,0 +1,4 @@
+=== chmod 3770 ===
+drwxrws--T 2 root clinic-staff 4096 Oct  4 23:59 /srv/clinic-notes
+=== otheruser rm expect fail ===
+rm_exit=1

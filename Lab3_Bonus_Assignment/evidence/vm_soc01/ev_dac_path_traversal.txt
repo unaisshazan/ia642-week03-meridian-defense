@@ -1,0 +1,3 @@
+=== DAC traversal ===
+Patient A routine follow-up, no action needed.
+Patient A outstanding balance: 420.00 USD

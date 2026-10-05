@@ -1,0 +1,59 @@
+hostname=meridian-soc01
+=== Evidence 6 complain ===
+Patient A outstanding balance: 420.00 USD
+complain_exit=0
+=== AA ALLOWED/DENIED (journal/dmesg/audit) ===
+type=PATH msg=audit(1791158463.454:490): item=0 name="/dev/tty" inode=12 dev=00:05 mode=020666 ouid=0 ogid=5 rdev=05:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791158463.454:490): cwd="/home/wazuh"
+type=SYSCALL msg=audit(1791158463.454:490): arch=c000003e syscall=257 success=no exit=-6 a0=ffffff9c a1=5d75e2c8caa8 a2=802 a3=0 items=1 ppid=7038 pid=7039 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=5 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)
+type=AVC msg=audit(1791158463.454:490): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7039 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0
+----
+time->Mon Oct  5 00:01:04 2026
+type=PROCTITLE msg=audit(1791158464.269:511): proctitle=2F7362696E2F61707061726D6F725F706172736572002D492F6574632F61707061726D6F722E64002D2D62617365002F6574632F61707061726D6F722E64002D72002F6574632F61707061726D6F722E642F6F70742E6D6572696469616E2D736372697074732E636C696E69632D7669657765722E7368
+type=SYSCALL msg=audit(1791158464.269:511): arch=c000003e syscall=1 success=yes exit=25569 a0=5 a1=5667449d2f30 a2=63e1 a3=0 items=0 ppid=7053 pid=7054 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=5 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+type=AVC msg=audit(1791158464.269:511): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7054 comm="apparmor_parser"
+----
+time->Mon Oct  5 00:01:04 2026
+type=PROCTITLE msg=audit(1791158464.353:522): proctitle=2F62696E2F62617368002F6F70742F6D6572696469616E2D736372697074732F636C696E69632D7669657765722E7368002E2E2F62696C6C696E672F6C65646765722E747874
+type=PATH msg=audit(1791158464.353:522): item=0 name="/dev/tty" inode=12 dev=00:05 mode=020666 ouid=0 ogid=5 rdev=05:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791158464.353:522): cwd="/home/wazuh"
+type=SYSCALL msg=audit(1791158464.353:522): arch=c000003e syscall=257 success=no exit=-13 a0=ffffff9c a1=5b0888024aa8 a2=802 a3=0 items=1 ppid=7060 pid=7061 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=5 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)
+type=AVC msg=audit(1791158464.353:522): apparmor="DENIED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7061 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0
+----
+time->Mon Oct  5 00:02:30 2026
+type=PROCTITLE msg=audit(1791158550.086:644): proctitle=61707061726D6F725F706172736572002D72002F6574632F61707061726D6F722E642F6F70742E6D6572696469616E2D736372697074732E636C696E69632D7669657765722E7368
+type=SYSCALL msg=audit(1791158550.086:644): arch=c000003e syscall=1 success=yes exit=25401 a0=5 a1=592b5f1ad400 a2=6339 a3=0 items=0 ppid=7321 pid=7322 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=12 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+type=AVC msg=audit(1791158550.086:644): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7322 comm="apparmor_parser"
+----
+time->Mon Oct  5 00:02:31 2026
+type=PROCTITLE msg=audit(1791158551.179:651): proctitle=2F7362696E2F61707061726D6F725F706172736572002D492F6574632F61707061726D6F722E64002D2D62617365002F6574632F61707061726D6F722E64002D72002F6574632F61707061726D6F722E642F6F70742E6D6572696469616E2D736372697074732E636C696E69632D7669657765722E7368
+type=SYSCALL msg=audit(1791158551.179:651): arch=c000003e syscall=1 success=yes exit=25401 a0=5 a1=580ff8c2e330 a2=6339 a3=0 items=0 ppid=7326 pid=7327 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts2 ses=12 comm="apparmor_parser" exe="/usr/sbin/apparmor_parser" subj=unconfined key=(null)
+type=AVC msg=audit(1791158551.179:651): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7327 comm="apparmor_parser"
+----
+time->Mon Oct  5 00:02:32 2026
+type=PROCTITLE msg=audit(1791158552.358:662): proctitle=2F62696E2F62617368002F6F70742F6D6572696469616E2D736372697074732F636C696E69632D7669657765722E7368002E2E2F62696C6C696E672F6C65646765722E747874
+type=PATH msg=audit(1791158552.358:662): item=0 name="/dev/tty" inode=12 dev=00:05 mode=020666 ouid=0 ogid=5 rdev=05:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791158552.358:662): cwd="/home/wazuh"
+type=SYSCALL msg=audit(1791158552.358:662): arch=c000003e syscall=257 success=no exit=-6 a0=ffffff9c a1=607d986b8aa8 a2=802 a3=0 items=1 ppid=7331 pid=7332 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=12 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)
+type=AVC msg=audit(1791158552.358:662): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7332 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0
+----
+time->Mon Oct  5 00:02:32 2026
+type=PROCTITLE msg=audit(1791158552.391:663): proctitle=636174002F7372762F636C696E69632D6E6F7465732F2E2E2F62696C6C696E672F6C65646765722E747874
+type=PATH msg=audit(1791158552.391:663): item=0 name="/srv/clinic-notes/../billing/ledger.txt" inode=918985 dev=fc:00 mode=0100640 ouid=0 ogid=1002 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1791158552.391:663): cwd="/home/wazuh"
+type=SYSCALL msg=audit(1791158552.391:663): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffecc060e2e a2=0 a3=0 items=1 ppid=7332 pid=7333 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=12 comm="cat" exe="/usr/bin/cat" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)
+type=AVC msg=audit(1791158552.391:663): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/srv/billing/ledger.txt" pid=7333 comm="cat" requested_mask="r" denied_mask="r" fsuid=1001 ouid=0
+type=AVC msg=audit(1791158462.314:472): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7027 comm="apparmor_parser"
+type=AVC msg=audit(1791158463.261:479): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7032 comm="apparmor_parser"
+type=AVC msg=audit(1791158463.454:490): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7039 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0FSUID="nurse01" OUID="root"
+type=SYSCALL msg=audit(1791158463.454:490): arch=c000003e syscall=257 success=no exit=-6 a0=ffffff9c a1=5d75e2c8caa8 a2=802 a3=0 items=1 ppid=7038 pid=7039 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=5 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)ARCH=x86_64 SYSCALL=openat AUID="wazuh" UID="nurse01" GID="nurse01" EUID="nurse01" SUID="nurse01" FSUID="nurse01" EGID="nurse01" SGID="nurse01" FSGID="nurse01"
+type=AVC msg=audit(1791158464.269:511): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7054 comm="apparmor_parser"
+type=AVC msg=audit(1791158464.353:522): apparmor="DENIED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7061 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0FSUID="nurse01" OUID="root"
+type=SYSCALL msg=audit(1791158464.353:522): arch=c000003e syscall=257 success=no exit=-13 a0=ffffff9c a1=5b0888024aa8 a2=802 a3=0 items=1 ppid=7060 pid=7061 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=5 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)ARCH=x86_64 SYSCALL=openat AUID="wazuh" UID="nurse01" GID="nurse01" EUID="nurse01" SUID="nurse01" FSUID="nurse01" EGID="nurse01" SGID="nurse01" FSGID="nurse01"
+type=AVC msg=audit(1791158550.086:644): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7322 comm="apparmor_parser"
+type=AVC msg=audit(1791158551.179:651): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/opt/meridian-scripts/clinic-viewer.sh" pid=7327 comm="apparmor_parser"
+type=AVC msg=audit(1791158552.358:662): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/dev/tty" pid=7332 comm="clinic-viewer.s" requested_mask="wr" denied_mask="wr" fsuid=1001 ouid=0FSUID="nurse01" OUID="root"
+type=SYSCALL msg=audit(1791158552.358:662): arch=c000003e syscall=257 success=no exit=-6 a0=ffffff9c a1=607d986b8aa8 a2=802 a3=0 items=1 ppid=7331 pid=7332 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=12 comm="clinic-viewer.s" exe="/usr/bin/bash" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)ARCH=x86_64 SYSCALL=openat AUID="wazuh" UID="nurse01" GID="nurse01" EUID="nurse01" SUID="nurse01" FSUID="nurse01" EGID="nurse01" SGID="nurse01" FSGID="nurse01"
+type=AVC msg=audit(1791158552.391:663): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/srv/billing/ledger.txt" pid=7333 comm="cat" requested_mask="r" denied_mask="r" fsuid=1001 ouid=0FSUID="nurse01" OUID="root"
+type=SYSCALL msg=audit(1791158552.391:663): arch=c000003e syscall=257 success=yes exit=3 a0=ffffff9c a1=7ffecc060e2e a2=0 a3=0 items=1 ppid=7332 pid=7333 auid=1000 uid=1001 gid=1003 euid=1001 suid=1001 fsuid=1001 egid=1003 sgid=1003 fsgid=1003 tty=(none) ses=12 comm="cat" exe="/usr/bin/cat" subj=/opt/meridian-scripts/clinic-viewer.sh key=(null)ARCH=x86_64 SYSCALL=openat AUID="wazuh" UID="nurse01" GID="nurse01" EUID="nurse01" SUID="nurse01" FSUID="nurse01" EGID="nurse01" SGID="nurse01" FSGID="nurse01"
+type=PATH msg=audit(1791158552.391:663): item=0 name="/srv/clinic-notes/../billing/ledger.txt" inode=918985 dev=fc:00 mode=0100640 ouid=0 ogid=1002 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0OUID="root" OGID="billing"

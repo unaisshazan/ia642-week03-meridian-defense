@@ -1,0 +1,6 @@
+hostname=meridian-soc01
+=== Evidence 6 complain ===
+Patient A outstanding balance: 420.00 USD
+complain_exit=0
+=== key AVC ===
+type=AVC msg=audit(1791158552.391:663): apparmor="ALLOWED" operation="open" class="file" profile="/opt/meridian-scripts/clinic-viewer.sh" name="/srv/billing/ledger.txt" pid=7333 comm="cat" requested_mask="r" denied_mask="r" fsuid=1001 ouid=0

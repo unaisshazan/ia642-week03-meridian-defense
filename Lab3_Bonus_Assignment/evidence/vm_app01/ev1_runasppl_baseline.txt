@@ -1,0 +1,10 @@
+﻿
+cmd : ERROR: The system was unable to find the specified registry key or value.
+At C:\Meridian\part_a.ps1:7 char:1
++ cmd /c 'reg query "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v RunA ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ERROR: The syst...y key or value.:String) [], RemoteE 
+   xception
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+

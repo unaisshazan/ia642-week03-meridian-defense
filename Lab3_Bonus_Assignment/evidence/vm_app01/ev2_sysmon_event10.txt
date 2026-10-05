@@ -1,0 +1,14 @@
+﻿Process accessed:
+RuleName: -
+UtcTime: 2026-10-04 23:51:34.090
+SourceProcessGUID: {0492c3a1-e685-6ac2-e001-000000000800}
+SourceProcessId: 1084
+SourceThreadId: 384
+SourceImage: C:\Windows\System32\rundll32.exe
+TargetProcessGUID: {0492c3a1-4ac8-6ac0-0c00-000000000800}
+TargetProcessId: 700
+TargetImage: C:\Windows\system32\lsass.exe
+GrantedAccess: 0x1FFFFF
+CallTrace: C:\Windows\SYSTEM32\ntdll.dll+9f3b4|C:\Windows\SYSTEM32\ntdll.dll+db730|C:\Windows\System32\KERNEL32.DLL+1e134|C:\Windows\System32\KERNEL32.DLL+2524e|C:\Windows\SYSTEM32\dbgcore.DLL+a47a|C:\Windows\SYSTEM32\dbgcore.DLL+19735|C:\Windows\SYSTEM32\dbgcore.DLL+12988|C:\Windows\SYSTEM32\dbgcore.DLL+66a8|C:\Windows\SYSTEM32\dbgcore.DLL+71b8|C:\Windows\System32\comsvcs.dll+2715a|C:\Windows\System32\rundll32.exe+4266|C:\Windows\System32\rundll32.exe+459f|C:\Windows\System32\rundll32.exe+781d|C:\Windows\System32\KERNEL32.DLL+14ed0|C:\Windows\SYSTEM32\ntdll.dll+7e39b
+SourceUser: MERIDIAN-APP01\Administrator
+TargetUser: NT AUTHORITY\SYSTEM
